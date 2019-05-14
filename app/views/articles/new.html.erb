@@ -1,0 +1,16 @@
+<div class="navbar">
+  <h1> <%= link_to "Beernomous", articles_path %></h3>
+  <h3> <%= link_to "Add beer", new_article_path %></h3>
+</div>
+
+<div class="container">
+  <%= form_for(@article) do |f| %>
+    <%= f.label :title %> <br>
+    <%= f.text_field :title %> <br>
+
+    <%= f.label :content %> <br>
+    <%= f.text_field :content %> <br>
+    <br>
+    <%= f.submit %>
+  <% end %>
+</div>
